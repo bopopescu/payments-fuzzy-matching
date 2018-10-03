@@ -1,2 +1,7 @@
 bottle==0.12.13
 requests==2.12.4
+fuzzywuzzy==0.17.0
+pandas==0.23.0
+numpy==1.14.3
+mysql-connector==2.1.6
+python-Levenshtein==0.12.0
