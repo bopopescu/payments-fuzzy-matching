@@ -32,6 +32,6 @@ def validate_payment(name, sort_code, account_number, pass_threshold):
             output_array[5] = 'Reference payee name not found'
     
             
-    output_json = "{'name': '" + str(output_array[0]) + "', 'sort_code': '" + str(output_array[1]) + "', 'account_number': '" + str(output_array[2]) + "', 'match_percentage': '" + str(output_array[3]) + "', 'payment_status': '" + str(output_array[4]) + "', 'error_message': '" + str(output_array[5]) + "'}"
+    output_json = {"'name': '" + str(output_array[0]) + "', 'sort_code': '" + str(output_array[1]) + "', 'account_number': '" + str(output_array[2]) + "', 'match_percentage': '" + str(output_array[3]) + "', 'payment_status': '" + str(output_array[4]) + "', 'error_message': '" + str(output_array[5]) + "'"}
     
     return (json.dumps(output_json))
