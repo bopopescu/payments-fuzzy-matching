@@ -58,10 +58,14 @@
             res = res.error_message;
             document.getElementById("response_div").innerHTML = res;
             document.getElementById("response_div").className = "alert alert-success";
-          } else if (res.error_message == '-') {
+          } else if (res.error_message == '-' && res.match_percentage > 70) {
             res = (res.match_percentage + '% match');     
             document.getElementById("response_div").innerHTML = res;
             document.getElementById("response_div").className = "alert alert-success";
+          } else if (res.error_message == '-' && res.match_percentage < 70) {
+            res = (res.match_percentage + '% match');     
+            document.getElementById("response_div").innerHTML = res;
+            document.getElementById("response_div").className = "alert alert-danger";
           } else {
             res = res.error_message;
             document.getElementById("response_div").innerHTML = res;
